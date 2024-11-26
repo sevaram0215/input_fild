@@ -1,0 +1,113 @@
+
+.App{
+
+width: 30%;
+margin: auto;
+ box-shadow: rgba(72, 145, 190, 0.4) 0px 0px 0px 2px, rgba(236, 230, 230, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+ & .input_div{
+  width: 90%;
+
+& 
+  input{
+    padding: 0.5rem;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: #38dc29;
+    }
+  }
+
+}
+
+  .button_div{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 5px;
+    gap: 1rem;
+
+    label {
+      margin-right: 0.5rem;
+      font-weight: bold;
+    }
+
+    .buttan_1{
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #3997fc;
+      color: rgba(238, 212, 212, 0.87);
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+
+      &:hover {
+        background-color: #9fc2e9;
+        transform: scale(1.05);
+        color: black;
+      }
+
+      &:active {
+        background-color: #003d7a;
+      }
+    }
+    .buttan_2{
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #3997fc;
+      color: rgba(238, 212, 212, 0.87);
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+
+      &:hover {
+        background-color: #00b312;
+        transform: scale(1.05);
+        color: rgb(30, 29, 29);
+      }
+
+      &:active {
+        background-color: #003d7a;
+      }
+    }
+  }
+
+
+
+}
+
+@media screen and (min-width: 250px) and (max-width: 768px) {
+  .App {
+    width: 80%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  }
+
+  .button_div {
+    flex-direction: column;
+  gap: 0;
+  }
+
+  .input_div{
+    flex-direction: column;
+    & input {
+      margin-top: 5px;
+      margin-bottom: 1rem;
+      width: 100%; 
+      padding: 5px;
+    }
+    & .arrow{
+     
+      margin-left: 50%;
+      margin-bottom: 10%;
+     
+    }
+  }
+
+}
