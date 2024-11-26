@@ -17,23 +17,24 @@ function App() {
   };
 
 
-  const _moveBtn1 =()=>{
-    setInputValue2(inputValue1)
-    setInputValue1("")
-    if(inputValue1 === ""){
-      alert("Please enter the first value")
+  const _moveBtn1 = () => {
+    if (inputValue1 === "") {
+      alert("Please enter the first value");
+    } else {
+      setInputValue2(inputValue1);
+      setInputValue1("");
     }
-
-
-  }
-  const _moveBtn2=()=>{
-    setInputValue1(inputValue2)
-    setInputValue2("")
+  };
+  
+  const _moveBtn2 = () => {
     if (inputValue2 === "") {
-      alert("Please enter name input 2");
+      alert("Please enter the second value");
+    } else {
+      setInputValue1(inputValue2);
+      setInputValue2(""); 
     }
-
-  }
+  };
+  
 
 
 
@@ -63,22 +64,10 @@ function App() {
    
 <div>
 <FaLongArrowAltRight className="arrow"  style={{color:"red", marginTop:"30px"}} 
-             onClick={() => {
-              setInputValue2(inputValue1);
-              setInputValue1("");
-              if (inputValue1 === "") {
-                alert("Please enter name 1");
-              }
-            }}
+             onClick={_moveBtn1}
            />
            <FaLongArrowAltLeft  style={{color:"green"}}
-             onClick={() => {
-              setInputValue1(inputValue2);
-              setInputValue2("");
-              if (inputValue2 === "") {
-                alert("Please enter name input 2");
-              }
-            }}
+             onClick={_moveBtn2}
            
            />
 </div>
